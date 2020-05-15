@@ -25,7 +25,7 @@
     "rxjs": "^5.5.0",
     "systemjs": "^0.20.19",
     "zone.js": "^0.8.5",
-    "jquery": "^3.1.1",
+    "jquery": "^3.5.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
