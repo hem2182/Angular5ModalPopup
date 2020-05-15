@@ -1,29 +1,24 @@
 ﻿<div class="col-md-6 col-md-offset-3">
-    <h1>Home</h1>
-    <p>{{bodyText}}</p>
-    <button (click)="openModal('custom-modal-1')">Open Modal 1</button>
-    <button (click)="openModal('custom-modal-2')">Open Modal 2</button>
+  <h1>Home</h1>
+  <p>{{ bodyText }}</p>
+  <button class="sample" (click)="AlertUser()">Open Modal 1</button>
+  <button (click)="openModal('custom-modal-2')">Open Modal 2</button>
 </div>
 
-<modal id="custom-modal-1">
-    <div class="modal">
-        <div class="modal-body">
-            <h1>A Custom Modal!</h1>
-            <p>
-                Home page text: <input type="text" [(ngModel)]="bodyText" />
-            </p>
-            <button (click)="closeModal('custom-modal-1');">Close</button>
-        </div>
+<div id="myModal">
+  <modal id="custom-modal-1">
+    <div class="myModalHeader">{{ PopupHeader }}</div>
+    <div class="myModalBody">{{ PopupHeader }}</div>
+    <div class="myModalFooter">
+      <div *ngIf="PopupType === 1">
+        <button class="btn" (click)="Function1()">Confirm</button>
+        <button class="btn" (click)="closeModal('custom-modal-1')">
+          Cancel
+        </button>
+      </div>
+      <div *ngIf="PopupType === 0">
+        <button class="btn" (click)="closeModal('custom-modal-1')">Ok</button>
+      </div>
     </div>
-    <div class="modal-background"></div>
-</modal>
-
-<modal id="custom-modal-2">
-    <div class="modal">
-        <div class="modal-body">
-            <h1 style="height:1000px">A Tall Custom Modal!</h1>
-            <button (click)="closeModal('custom-modal-2');">Close</button>
-        </div>
-    </div>
-    <div class="modal-background"></div>
-</modal>
+  </modal>
+</div>

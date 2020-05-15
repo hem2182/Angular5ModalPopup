@@ -1,0 +1,26 @@
+<div class="modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          <ng-content select=".myModalHeader"></ng-content>
+        </h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          (click)="close()"
+        >
+          ×
+        </button>
+      </div>
+      <div class="modal-body">
+        <ng-content select=".myModalBody"></ng-content>
+      </div>
+      <div class="modal-footer">
+        <ng-content select=".myModalFooter"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-background"></div>
